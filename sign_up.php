@@ -1,7 +1,7 @@
 <?php
 if($_POST)
 {
-$db = mysqli_connect("localhost","smartaud_root","Rooter@15061987","smartaud_main");
+$db = mysqli_connect("eu-cdbr-west-03.cleardb.net","b622d4411afd95","fcdf179a","heroku_d686cc7dd5c25ab");
 $sql="INSERT INTO `form2` (`id`, `first_name`, `last_name`, `city`, `country`, `profession`, `age`, `gender`, `email`, `password`) VALUES (NULL, '".$_POST["first_name"]."', '".$_POST["last_name"]."', '".$_POST["city"]."', '".$_POST["country"]."', '".$_POST["profession"]."', '".$_POST["age"]."', '".$_POST["gender"]."', '".$_POST["gender"]."', '".$_POST["password"]."');";
 mysqli_query($db,"SET NAMES UTF8");
 mysqli_query($db,$sql);
