@@ -1,6 +1,7 @@
 <html>
 <head>
 <link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="text_types.css"/>
 </head>
 <body>
 
@@ -16,7 +17,7 @@
 <button onclick="window.location='solutions.php'" class="button_without_background">Solutions</button>
 <button onclick="window.location='index.php'" class="button_without_background">Pricing</button>
 <button onclick="window.location='index.php'" class="button_without_background">Contact us</button>
-<button onclick="window.location='index.php'" class="button_with_background">Try for free</button>
+<button onclick="window.location='try_for_free.php'" class="button_with_background">Try for free</button>
 <button onclick="window.location='sign_in.php'" class="button_without_background">Sign in</button>
 </div>
 
