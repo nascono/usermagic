@@ -2,7 +2,14 @@
 if($_POST)
 {
 $db = mysqli_connect("eu-cdbr-west-03.cleardb.net","b622d4411afd95","fcdf179a","heroku_d686cc7dd5c25ab");
-$sql="INSERT INTO `form2` (`id`, `first_name`, `last_name`, `city`, `country`, `profession`, `age`, `gender`, `email`, `password`) VALUES (NULL, '".$_POST["first_name"]."', '".$_POST["last_name"]."', '".$_POST["city"]."', '".$_POST["country"]."', '".$_POST["profession"]."', '".$_POST["age"]."', '".$_POST["gender"]."', '".$_POST["email"]."', '".$_POST["password"]."');";
+$sql="INSERT INTO `companies` (`id`, `company`, `title`, `city`, `country`, `full_name`, `email`, `password`) VALUES (NULL, '".
+$_POST["company"]."', '".
+$_POST["title"]."', '".
+$_POST["city"]."', '".
+$_POST["country"]."', '".
+$_POST["full_name"]."', '".
+$_POST["email"]."', '".
+$_POST["password"]."');";
 mysqli_query($db,"SET NAMES UTF8");
 mysqli_query($db,$sql);
 echo "Successfully register you are directing to main page";
@@ -57,18 +64,18 @@ exit();
 
 <div class="slide" id="slide-1">
 <span style="margin-top: 11%;" class="text_type_8 block">Welcome to Usermagic</span>
-<span class="text_type_9 block">Earn money by completing forms or giving feedback on apps and websites.</span>
+
 
 
 <div class="block" style="margin-top: 4%;">
 <div class="inline_block" style="width: 45%;">
-<span class="block text_type_10">First Name</span>
-<input type="text" name="first_name" id="first_name" class="input_type_text block small_textbox"/>
+<span class="block text_type_10">Company</span>
+<input type="text" name="company" id="company" class="input_type_text block small_textbox"/>
 
 </div>
 <div class="inline_block" style="margin-left: 9%; width: 45%;">
-<span class="block text_type_10">Last Name</span>
-<input type="text" name="last_name" id="last_name" class="input_type_text block small_textbox"/>
+<span class="block text_type_10">Title</span>
+<input type="text" name="title" id="title" class="input_type_text block small_textbox"/>
 
 </div>
 </div>
@@ -98,18 +105,22 @@ exit();
 
 
 
-<div class="slide" id="slide-2">
+<div class="slide" id="slide-1">
 <span style="margin-top: 11%;" class="text_type_8 block">Welcome to Usermagic</span>
-<span class="text_type_9 block">Earn money by completing forms or giving feedback on apps and websites.</span>
+
 
 
 <div class="block" style="margin-top: 4%;">
-<div class="inline_block" style="width: 99%;">
+<div class="inline_block" style="width: 45%;">
+<span class="block text_type_10">Full Name</span>
+<input type="text" name="full_name" id="full_name" class="input_type_text block small_textbox"/>
+
+</div>
+<div class="inline_block" style="margin-left: 9%; width: 45%;">
 <span class="block text_type_10">Email</span>
 <input type="email" name="email" id="email" class="input_type_text block small_textbox"/>
 
 </div>
-
 </div>
 
 <div class="block" style="margin-top: 4%;">
@@ -125,10 +136,9 @@ exit();
 </div>
 </div>
 <div style="margin-top: 10%; text-align: -webkit-center;" class="block">
-<input id="submit_button" type="submit" class="block button_with_background_2" value="Let's Begin!"/>
+<span onclick="window.location='#slide-2';" class="block button_with_background_2">Perfect!</span>
 <div><span class="text_type_11">Already a member?&nbsp;</span><span onclick="window.location='sign_in.php';" style="cursor: pointer;" class="text_type_12">Sign in</span></div>
 <div class="block" style="margin-top: 10%;"><div onclick="window.location='#slide-1';" class="circle_grey"></div><div onclick="window.location='#slide-2';" class="circle_blue"></div></div>
-<div class="block"></div>
 </div>
 
 
@@ -162,13 +172,11 @@ passwordmatch=false;
 alert("passwords don't match");
 }
 
-if(document.getElementById("first_name").value!=""&&
-document.getElementById("last_name").value!=""&&
+if(document.getElementById("company").value!=""&&
+document.getElementById("title").value!=""&&
 document.getElementById("city".value)!=""&&
 document.getElementById("country").value!=""&&
-document.getElementById("profession").value!=""&&
-document.getElementById("age").value!=""&&
-document.getElementById("gender").value!=""&&
+document.getElementById("full_name").value!=""&&
 document.getElementById("email").value!=""&&
 document.getElementById("password").value!="")
 {
