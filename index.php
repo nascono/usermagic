@@ -33,7 +33,7 @@
 <div class="middle">
 
 <div class="middle_box_index_php">
-<img class="middle_box_index_php_image" src="res/mainimagea.svg"/>
+<img class="middle_box_index_php_image" src="res/mainimage.svg"/>
 <button onclick="window.location='try_for_free.php'" class="button_with_background">Try for free</button>
 </div>
 
