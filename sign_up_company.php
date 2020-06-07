@@ -136,7 +136,7 @@ exit();
 </div>
 </div>
 <div style="margin-top: 10%; text-align: -webkit-center;" class="block">
-<span onclick="window.location='#slide-2';" class="block button_with_background_2">Perfect!</span>
+<input id="submit_button" type="submit" class="block button_with_background_2" value="Let's Begin!"/>
 <div><span class="text_type_11">Already a member?&nbsp;</span><span onclick="window.location='sign_in.php';" style="cursor: pointer;" class="text_type_12">Sign in</span></div>
 <div class="block" style="margin-top: 10%;"><div onclick="window.location='#slide-1';" class="circle_grey"></div><div onclick="window.location='#slide-2';" class="circle_blue"></div></div>
 </div>
