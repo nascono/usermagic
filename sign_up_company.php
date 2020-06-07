@@ -52,7 +52,7 @@ exit();
 <div class="middle_flex">
 <div class="middle_flex_left">
 
-<img class="middle_flex_left_image" style="max-width: 50%;" src=" res/sign_in.svg"/>
+<img class="middle_flex_left_image" style="max-width: 50%;" src=" res/sign_in_pic.svg"/>
 </div>
 
 
