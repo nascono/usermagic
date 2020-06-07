@@ -105,7 +105,7 @@ exit();
 
 
 
-<div class="slide" id="slide-1">
+<div class="slide" id="slide-2">
 <span style="margin-top: 11%;" class="text_type_8 block">Welcome to Usermagic</span>
 
 
