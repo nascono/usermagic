@@ -28,7 +28,7 @@ exit();
 <div class="top">
 
 <div class="logo_box vertical-center">
-<img style="cursor: pointer; width:350px;" onclick="window.location='index.php'" src="res/logo.png"/>
+<img style="cursor: pointer; width:500px;" onclick="window.location='index.php'" src="res/logo.png"/>
 </div>
 
 
