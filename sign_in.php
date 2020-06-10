@@ -9,7 +9,7 @@
 <div class="top">
 
 <div class="logo_box vertical-center">
-<img style="cursor: pointer;" onclick="window.location='index.php'" src="res/logo.svg"/>
+<img style="cursor: pointer; width:350px;" onclick="window.location='index.php'" src="res/logo.png"/>
 </div>
 
 
