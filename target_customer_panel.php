@@ -1,4 +1,6 @@
 <?php
+	print "<h2>PHP is Fun!</h2>";
+
 if($_POST)
 {
 
@@ -71,8 +73,8 @@ function get_ages()
 <span class="text_type_14">Age</span>
 </div>
 <div class="block">
-<select class="select_box_radio_button text_type_15" name="age_1" id="age_1"><?php print "<h2>PHP is Fun!</h2>"; ?></select>
-<select class="select_box_radio_button text_type_15" name="age_2" id="age_2"><?php get_ages(); ?></select>
+<select class="select_box_radio_button text_type_15" name="age_1" id="age_1"></select>
+<select class="select_box_radio_button text_type_15" name="age_2" id="age_2"></select>
 </div>
 
 <div class="block">
@@ -109,6 +111,18 @@ function get_ages()
 </div>
 </div>
 <script>
+for(var i=13; i<=30; i++)
+{
+var new_age = document.createElement("option");
+var new_age2 = document.createElement("option");
+
+new_age.innerHTML=i;
+new_age2.innerHTML=i;
+document.getElementById("age_1").appendChild(new_age);  
+document.getElementById("age_2").appendChild(new_age2);  
+}
+
+
 function gender_changed( str1, str2, str3)
 {
 	document.getElementById(str1).style.border="2px solid #187CE0";
