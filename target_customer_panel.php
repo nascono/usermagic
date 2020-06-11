@@ -1,6 +1,7 @@
 <?php
 if($_POST)
 {
+print "<h2>PHP is Fun!</h2>";
 echo"<pre>";
  print_r($_POST);
  exit();
