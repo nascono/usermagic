@@ -1,7 +1,7 @@
 <?php
 if($_POST)
 {
-print "<h2>PHP is Fun!</h2>";
+
 echo"<pre>";
  print_r($_POST);
  exit();
@@ -71,7 +71,7 @@ function get_ages()
 <span class="text_type_14">Age</span>
 </div>
 <div class="block">
-<select class="select_box_radio_button text_type_15" name="age_1" id="age_1"><?php get_ages(); ?></select>
+<select class="select_box_radio_button text_type_15" name="age_1" id="age_1"><?php print "<h2>PHP is Fun!</h2>"; ?></select>
 <select class="select_box_radio_button text_type_15" name="age_2" id="age_2"><?php get_ages(); ?></select>
 </div>
 
