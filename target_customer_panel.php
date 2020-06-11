@@ -1,6 +1,7 @@
 <?php
 if($_POST)
 {
+echo"<pre>";
  print_r($_POST);
  exit();
 }
@@ -48,7 +49,7 @@ if($_POST)
 <span class="text_type_14">Gender</span>
 </div>
 <div class="block">
-<input type="hidden" name="gender" id="gender"/>
+<input type="hidden" name="gender" id="gender_input"/>
 <div onclick="gender_changed('all_gender','woman_gender','male_gender');" id="all_gender" class="select_box_radio_button "><span class="text_type_16">All Gender</span></div>
 
 <div onclick="gender_changed('woman_gender','all_gender','male_gender');" id="woman_gender" class="select_box_radio_button"><span class="text_type_16">Woman</span></div>
@@ -103,7 +104,7 @@ function gender_changed( str1, str2, str3)
 	document.getElementById(str1).style.border="2px solid #187CE0";
 	document.getElementById(str2).style.border="2px solid #E2E2E2";
 	document.getElementById(str3).style.border="2px solid #E2E2E2";
-	document.getElementById("gender").value=str1;
+	document.getElementById("gender_input").value=str1;
 }
 
 
