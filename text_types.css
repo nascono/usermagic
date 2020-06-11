@@ -96,6 +96,44 @@ font-size: 24px;
 line-height: 160%;
 color: #C78FFE;
 }
+.text_type_13
+{
+	font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 45px;
+
+color: #212353;
+}
+.text_type_14
+{
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 36px;
+
+color: #212353;
+}
+.text_type_15
+{
+	font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+
+color: #212353;
+}
+
+.text_type_16
+{
+	font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 63px;
+color: #212353;
+}
+
 .input_type_text
 {
 vertical-align: middle;
