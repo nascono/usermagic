@@ -18,12 +18,12 @@ function get_ages()
 }
 function get_locations()
 {
-	/*$myvalue="";
-	$str[]={"turkey","usa"};
+	$myvalue="";
+	$str=array("turkey","usa");
 	for ($x = 0; $x <= count($str); $x++) {
 	$myvalue=$myvalue."<option>".$str[$x]."</option>";
-	}*/
-	print("");
+	}
+	print(myvalue);
 }
 function get_interests()
 {
