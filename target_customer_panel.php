@@ -5,6 +5,13 @@ echo"<pre>";
  print_r($_POST);
  exit();
 }
+function get_ages()
+{
+	for($i=13;$i=40;$i++)
+	{
+		echo"<option>".$i."</option>";
+	}
+}
 ?>
 <html>
 <head>
@@ -61,8 +68,8 @@ echo"<pre>";
 <span class="text_type_14">Age</span>
 </div>
 <div class="block">
-<select class="select_box_radio_button text_type_15" name="age_1" id="age_1"><option>13</option><option>14</option></select>
-<select class="select_box_radio_button text_type_15" name="age_2" id="age_2"><option>13</option><option>14</option></select>
+<select class="select_box_radio_button text_type_15" name="age_1" id="age_1"><?php get_ages(); ?></select>
+<select class="select_box_radio_button text_type_15" name="age_2" id="age_2"><?php get_ages(); ?></select>
 </div>
 
 <div class="block">
