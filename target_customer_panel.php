@@ -10,12 +10,11 @@ echo"<pre>";
 }
 function get_ages()
 {
-	//$str="";
+	$str="";
 	for ($x = 13; $x <= 40; $x++) {
-	
-	print "<h2>PHP is Fun!</h2>";
-
+	$str=$str."<option>".$x."</option>";
 	}
+	print($str);
 }
 ?>
 <html>
@@ -88,13 +87,13 @@ function get_ages()
 <span class="text_type_14">Location</span>
 </div>
 <div class="block">
-<select class="select_box_radio_button text_type_15" name="location" id="location"><option>Turkey</option><option>USA</option></select>
+<select class="select_box_radio_button text_type_15" name="location" id="location"><?php get_ages(); ?></select>
 </div>
 <div class="block">
 <span class="text_type_14">Interests</span>
 </div>
 <div class="interests_box">
-<div onclick="interests_added('asd');" id="asd" class="select_box_radio_button "><span class="text_type_16">asd</span></div>
+<div onclick="interests_added('asd');" id="asd" class="select_box_radio_button "><span class="text_type_16">aaa</span></div>
 <div onclick="interests_added('bbb');" id="bbb" class="select_box_radio_button"><span class="text_type_16">bbb</span></div>
 
 </div>
