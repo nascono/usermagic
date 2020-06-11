@@ -103,7 +103,7 @@ function gender_changed( str1, str2, str3)
 	document.getElementById(str1).style.border="2px solid #187CE0";
 	document.getElementById(str2).style.border="2px solid #E2E2E2";
 	document.getElementById(str3).style.border="2px solid #E2E2E2";
-	document.getElementById(str3).gender.value=str1;
+	document.getElementById("gender").value=str1;
 }
 
 
