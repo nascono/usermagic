@@ -18,9 +18,10 @@ function get_ages()
 }
 function get_locations()
 {
+	$myvalue="";
 	$str[]={"turkey","usa"};
 	for ($x = 0; $x <= count($str); $x++) {
-	$str=$str."<option>".$str[$x]."</option>";
+	$myvalue=$myvalue."<option>".$str[$x]."</option>";
 	}
 	print($str);
 }
@@ -28,12 +29,12 @@ function get_interests()
 {
 	$str[]={"aaa","bbb"};
 	for ($x = 0; $x <= count($str); $x++) {
-	$str=$str."<div onclick=\"interests_added('".
+	$myvalue=$myvalue."<div onclick=\"interests_added('".
 	$str[$x]."');\" id=\"".
 	$str[$x]."\" class=\"select_box_radio_button\"><span class=\"text_type_16\">".
 	$str[$x]."</span></div>";
 	}
-	print($str);
+	print($myvalue);
 }
 ?>
 <html>
