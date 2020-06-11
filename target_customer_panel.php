@@ -43,7 +43,7 @@ if($_POST)
 <span class="text_type_13">Determine your target customers</span>
 </div>
 
-<form>
+<form method="post">
 <div class="block">
 <span class="text_type_14">Gender</span>
 </div>
