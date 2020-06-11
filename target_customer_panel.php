@@ -11,7 +11,7 @@ echo"<pre>";
 function get_ages()
 {
 	$str="";
-	for ($x = 13; $x <= 40; $x++) {
+	for ($x = 13; $x <= 30; $x++) {
 	$str=$str."<option>".$x."</option>";
 	}
 	print($str);
@@ -19,7 +19,7 @@ function get_ages()
 function get_locations()
 {
 	$myvalue="";
-	$str=array("Turkey","Usa");
+	$str=array("Turkey","USA");
 	for ($x = 0; $x < count($str); $x++) {
 	$myvalue=$myvalue."<option>".$str[$x]."</option>";
 	}
@@ -30,7 +30,7 @@ function get_interests()
 	$myvalue="";
 	$str=array("aaa","bbb");
 	for ($x = 0; $x < count($str); $x++) {
-	$myvalue=$myvalue."<div onclick=\"interests_added('".
+	$myvalue=$myvalue."<div style=\"margin: 20px;\" onclick=\"interests_added('".
 	$str[$x]."');\" id=\"".
 	$str[$x]."\" class=\"select_box_radio_button\"><span class=\"text_type_16\">".
 	$str[$x]."</span></div>";
