@@ -7,10 +7,10 @@ echo"<pre>";
 }
 function get_ages()
 {
+	//$str="";
 	for ($x = 13; $x <= 40; $x++) {
-	print ("<opinion>");
-	print ($x);
-	print ("</opinion>");
+	
+	print "<h2>PHP is Fun!</h2>";
 
 	}
 }
