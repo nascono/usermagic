@@ -8,7 +8,10 @@ echo"<pre>";
 function get_ages()
 {
 	for ($x = 13; $x <= 40; $x++) {
-	echo "<opinion>A</opinion>";
+	print ("<opinion>");
+	print ($x);
+	print ("</opinion>");
+
 	}
 }
 ?>
