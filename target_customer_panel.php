@@ -19,23 +19,23 @@ function get_ages()
 function get_locations()
 {
 	$myvalue="";
-	$str=array("turkey","usa");
-	for ($x = 0; $x <= count($str); $x++) {
+	$str=array("Turkey","Usa");
+	for ($x = 0; $x < count($str); $x++) {
 	$myvalue=$myvalue."<option>".$str[$x]."</option>";
 	}
 	print($myvalue);
 }
 function get_interests()
 {
-	/*$myvalue="";
-	$str[]={"aaa","bbb"};
-	for ($x = 0; $x <= count($str); $x++) {
+	$myvalue="";
+	$str=array("aaa","bbb");
+	for ($x = 0; $x < count($str); $x++) {
 	$myvalue=$myvalue."<div onclick=\"interests_added('".
 	$str[$x]."');\" id=\"".
 	$str[$x]."\" class=\"select_box_radio_button\"><span class=\"text_type_16\">".
 	$str[$x]."</span></div>";
-	}*/
-	print("");
+	}
+	print($myvalue);
 }
 ?>
 <html>
