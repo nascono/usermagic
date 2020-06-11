@@ -27,6 +27,7 @@ function get_locations()
 }
 function get_interests()
 {
+	$myvalue="";
 	$str[]={"aaa","bbb"};
 	for ($x = 0; $x <= count($str); $x++) {
 	$myvalue=$myvalue."<div onclick=\"interests_added('".
