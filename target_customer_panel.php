@@ -23,7 +23,7 @@ function get_locations()
 	for ($x = 0; $x <= count($str); $x++) {
 	$myvalue=$myvalue."<option>".$str[$x]."</option>";
 	}
-	print($str);
+	print($myvalue);
 }
 function get_interests()
 {
