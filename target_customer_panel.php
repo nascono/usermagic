@@ -1,5 +1,5 @@
 <?php
-	print "<h2>PHP is Fun!</h2>";
+
 
 if($_POST)
 {
@@ -30,7 +30,7 @@ function get_interests()
 	$myvalue="";
 	$str=array("aaa","bbb");
 	for ($x = 0; $x < count($str); $x++) {
-	$myvalue=$myvalue."<div style=\"margin: 20px;\" onclick=\"interests_added('".
+	$myvalue=$myvalue."<div style=\"margin: 5px;\" onclick=\"interests_added('".
 	$str[$x]."');\" id=\"".
 	$str[$x]."\" class=\"select_box_radio_button\"><span class=\"text_type_16\">".
 	$str[$x]."</span></div>";
