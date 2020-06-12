@@ -1,3 +1,12 @@
+<?php
+if($_POST)
+{
+$db = mysqli_connect("eu-cdbr-west-03.cleardb.net","b622d4411afd95","fcdf179a","heroku_d686cc7dd5c25ab");
+$sql ='SELECT * FROM `companies` WHERE `email` ="'.$_POST["password"].'" &&`password`="'.$_POST["password"].'"';
+$result=mysqli_fetch_assoc(mysqli_query($sql));
+print_r($result);
+}
+?>
 <html>
 <head>
 <meta charset="UTF-8"/>
