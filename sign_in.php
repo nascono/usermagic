@@ -1,11 +1,11 @@
 <?php
 if($_POST)
 {
-echo "dddd";
+echo "aaaa";
 $db = mysqli_connect("eu-cdbr-west-03.cleardb.net","b622d4411afd95","fcdf179a","heroku_d686cc7dd5c25ab");
 $sql ='SELECT * FROM `companies` WHERE `email` ="'.$_POST["password"].'" &&`password`="'.$_POST["password"].'"';
 $result=mysqli_query($db,$sql);
-$myvalue=mysqli_fetch_array($result);
+$myvalue=mysqli_num_rows($result);
 print_r($myvalue);
 exit();
 }
