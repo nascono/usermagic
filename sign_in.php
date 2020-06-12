@@ -1,11 +1,12 @@
 <?php
 if($_POST)
 {
-echo "asd";
+echo "dddd";
 $db = mysqli_connect("eu-cdbr-west-03.cleardb.net","b622d4411afd95","fcdf179a","heroku_d686cc7dd5c25ab");
 $sql ='SELECT * FROM `companies` WHERE `email` ="'.$_POST["password"].'" &&`password`="'.$_POST["password"].'"';
-$result=mysqli_fetch_assoc(mysqli_query($db,$sql));
-print_r($result);
+$result=mysqli_query($db,$sql);
+$myvalue=mysqli_fetch_array($result);
+print_r($myvalue);
 exit();
 }
 ?>
