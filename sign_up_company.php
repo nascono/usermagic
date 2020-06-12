@@ -22,6 +22,7 @@ exit();
 <meta charset="UTF-8"/>
 <link rel="stylesheet" href="style.css"/>
 <link rel="stylesheet" href="text_types.css"/>
+<link rel="stylesheet" href="button_and_other_elements.css"/>
 </head>
 <body id="body">
 
