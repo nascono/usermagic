@@ -21,9 +21,9 @@ print($return_value);
 <html>
 <head>
 <meta charset="UTF-8"/>
-<link rel="stylesheet" href="style.css"/>
-<link rel="stylesheet" href="text_types.css"/>
-<link rel="stylesheet" href="button_and_other_elements.css"/>
+<link rel="stylesheet" href="styles/page_by_page/company_profile.css"/>
+<link rel="stylesheet" href="styles/text_types.css"/>
+<link rel="stylesheet" href="styles/button_and_other_elements.css"/>
 </head>
 <body>
 
@@ -40,7 +40,7 @@ print($return_value);
 <button onclick="window.location='index.php'" class="button_without_background">Pricing</button>
 <button onclick="window.location='index.php'" class="button_without_background">Contact us</button>
 <button onclick="window.location='try_for_free.php'" class="button_with_background">Try for free</button>
-sign_or_profile();
+<?php sign_or_profile();?>
 </div>
 
 

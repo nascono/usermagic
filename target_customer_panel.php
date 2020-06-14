@@ -41,9 +41,9 @@ function get_interests()
 <html>
 <head>
 <meta charset="UTF-8"/>
-<link rel="stylesheet" href="style.css"/>
-<link rel="stylesheet" href="text_types.css"/>
-<link rel="stylesheet" href="button_and_other_elements.css"/>
+<link rel="stylesheet" href="styles/page_by_page/target_customer_panel.css"/>
+<link rel="stylesheet" href="styles/text_types.css"/>
+<link rel="stylesheet" href="styles/button_and_other_elements.css"/>
 </head>
 <body>
 

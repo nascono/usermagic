@@ -58,7 +58,7 @@ transform: translateX(-50%);
 }
 .button_with_background
 {
-	margin-right: 30px;
+	margin-left: 30px;
 	vertical-align: middle;
 	width: 170px;
 	height: 60px;
@@ -73,7 +73,7 @@ transform: translateX(-50%);
 }
 .button_without_background
 {
-margin-right: 30px;
+margin-left: 30px;
 background-color: transparent;
 font-weight: 500;
 font-size: 24px;
