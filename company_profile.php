@@ -1,4 +1,16 @@
+<?php
+session_start();
+if(!isset($_SESSION['company_name']))
+{
+exit();
+header("Location: index.php");
+}
 
+function get_company_name()
+{
+print($_SESSION['company_name']);
+}
+?>
 
 <html>
 <head>
