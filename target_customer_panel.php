@@ -53,7 +53,7 @@ function get_interests()
 <div class="logo_box vertical-center">
 <img style="cursor: pointer; height:80px;" onclick="window.location='index.php'" src="res/logom.png"/>
 </div>
-</div>
+
 
 <div class="other_buttons_box vertical-center">
 <button onclick="window.location='sign_up.php'" class="button_without_background">Get paid to test</button>
@@ -64,7 +64,7 @@ function get_interests()
 <button onclick="window.location='sign_in.php'" class="button_without_background">Sign in</button>
 </div>
 
-
+</div>
 </div>
 
 
