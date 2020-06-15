@@ -1,14 +1,5 @@
-<?php
-include("back_end/sign_or_profile.php");
-if_session_dont_exists();
 
-if(isset($_GET["logout"]))
-{
-	session_destroy();
-	header("Refresh: 0; url=index.php");
-	exit();
-}
-?>
+
 <html>
 <head>
 <meta charset="UTF-8"/>
