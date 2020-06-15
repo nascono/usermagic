@@ -1,6 +1,13 @@
 <?php
 include("back_end/sign_or_profile.php");
 if_session_dont_exists();
+
+if(isset($_GET["logout"]))
+{
+	session_destroy();
+	header("Refresh: 0; url=index.php");
+	exit();
+}
 ?>
 <html>
 <head>
@@ -43,13 +50,19 @@ if_session_dont_exists();
 </div>
 
 <div class="block" style="text-align: -webkit-center;">
-<button style="margin-top: 4%;" onclick="window.location='create_qa_campaign.php';" class="select_box_radio_button_3"><span class="text_type_16">Start a Campaign</span></button>
+<button style="margin-top: 4%;" onclick="window.location='create_qa_campaign.php';" class="select_box_radio_button_3">
+<span class="text_type_16">Start a Campaign</span></button>
 </div>
 
 
 <div class="block" style="text-align: -webkit-center;">
 <button style="margin-top: 1%;" onclick="window.location='create_qa_campaign.php';" class="select_box_radio_button_3">
 <span class="text_type_16">Go to your exsiting campaigns</span></button>
+</div>
+
+<div class="block" style="text-align: -webkit-center;">
+<button style="margin-top: 1%;" onclick="window.location='?logout';" class="select_box_radio_button_3">
+<span class="text_type_16">Log out</span></button>
 </div>
 
 </div>
