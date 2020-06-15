@@ -1,22 +1,6 @@
 <?php
-session_start();
-if(!isset($_SESSION['company_name']))
-{
-exit();
-}
-function get_company_name()
-{
-print($_SESSION['company_name']);
-}
-function sign_or_profile()
-{
-$return_value="<button onclick=\"window.location='sign_in.php'\" class=\"button_without_background\">Sign in</button>";
-if(isset($_SESSION['company_name']))
-{
-$return_value="<button onclick=\"window.location='company_profile.php'\" class=\"button_without_background\">".$_SESSION['company_name']."</button>";
-}
-print($return_value);
-}
+include("back_end/sign_or_profile");
+if_session_dont_exists();
 ?>
 <html>
 <head>
@@ -55,7 +39,7 @@ print($return_value);
 <div  class="middle">
 <div style="width: 100%; height: 3%;"></div>
 <div  class="block" style="text-align: -webkit-center;">
-<span  class="text_type_13">Welcome Back <?php get_name(); ?></span>
+<span  class="text_type_13">Welcome Back <?php get_company_name(); ?></span>
 </div>
 
 <div class="block" style="text-align: -webkit-center;">
