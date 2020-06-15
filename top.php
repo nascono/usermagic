@@ -9,6 +9,15 @@ function sign_or_profile()
 		}
 	print($return_value);
 }
+function is_company_dont_show()
+{
+	$val ="";
+	if(isset($_SESSION['company_name']))
+	{
+		$val='style="display: none;"';
+	}
+	print($val);
+}
 ?>
 <div class="top">
 <div class="top_items">
@@ -18,11 +27,13 @@ function sign_or_profile()
 
 
 <div class="other_buttons_box vertical-center">
-<button onclick="window.location='sign_up.php'" class="button_without_background">Get paid to test</button>
-<button onclick="window.location='solutions.php'" class="button_without_background">Solutions</button>
-<button onclick="window.location='index.php'" class="button_without_background">Pricing</button>
-<button onclick="window.location='index.php'" class="button_without_background">Contact us</button>
-<button onclick="window.location='try_for_free.php'" class="button_with_background">Try for free</button>
+<button <?php is_company_dont_show() ?> onclick="window.location='sign_up.php'" class="button_without_background">Get paid to test</button>
+<button <?php is_company_dont_show() ?>  onclick="window.location='solutions.php'" class="button_without_background">Solutions</button>
+<button <?php is_company_dont_show() ?>  onclick="window.location='index.php'" class="button_without_background">Pricing</button>
+<button <?php is_company_dont_show() ?>  onclick="window.location='index.php'" class="button_without_background">Contact us</button>
+<button <?php is_company_dont_show() ?>  onclick="window.location='try_for_free.php'" class="button_with_background">Try for free</button>
+
+
 <?php sign_or_profile(); ?>
 </div>
 
