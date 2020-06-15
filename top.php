@@ -3,10 +3,19 @@ session_start();
 function sign_or_profile()
 {
 	$return_value="<button onclick=\"window.location='sign_in.php'\" class=\"button_without_background\">Sign in</button>";
-		if(isset($_SESSION['company_name']))
-		{
-			$return_value="<button onclick=\"window.location='company_profile.php'\" class=\"button_without_background\">".$_SESSION['company_name']."</button>";
-		}
+	if(isset($_SESSION['company_name']))
+	{
+		$return_value="<button onclick=\"window.location='company_profile.php'\" class=\"button_without_background\">".$_SESSION['company_name']."'s Dashboard"."</button>";
+	}
+	print($return_value);
+}
+function log_out_button()
+{
+	$return_value="";
+	if(isset($_SESSION['company_name']))
+	{
+		$return_value="<button onclick=\"window.location='log_out.php'\" class=\"button_without_background\">"."Log Out"."</button>";
+	}
 	print($return_value);
 }
 function is_company_dont_show()
@@ -33,8 +42,7 @@ function is_company_dont_show()
 <button <?php is_company_dont_show() ?>  onclick="window.location='index.php'" class="button_without_background">Contact us</button>
 <button <?php is_company_dont_show() ?>  onclick="window.location='try_for_free.php'" class="button_with_background">Try for free</button>
 
-
-<?php sign_or_profile(); ?>
+<?php sign_or_profile(); log_out_button(); ?>
 </div>
 
 </div>
