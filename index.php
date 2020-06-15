@@ -1,11 +1,11 @@
 <?php
 session_start();
-if(isset($_SESSION["company"]))
+if(isset($_SESSION["company_name"]))
 {
 	header("Refresh: 0; url=company_profile.php");
 	exit();
 }
-if(isset($_SESSION["user"]))
+if(isset($_SESSION["user_name"]))
 {
 	header("Refresh: 0; url=company_profile.php");
 	exit();
