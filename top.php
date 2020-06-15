@@ -1,5 +1,14 @@
 <?php
-include("back_end/sign_or_profile.php");
+session_start();
+function sign_or_profile()
+{
+	$return_value="<button onclick=\"window.location='sign_in.php'\" class=\"button_without_background\">Sign in</button>";
+		if(isset($_SESSION['company_name']))
+		{
+			$return_value="<button onclick=\"window.location='company_profile.php'\" class=\"button_without_background\">".$_SESSION['company_name']."</button>";
+		}
+	print($return_value);
+}
 ?>
 <div class="top">
 <div class="top_items">
