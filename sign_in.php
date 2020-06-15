@@ -56,14 +56,14 @@ exit();
 
 <span class="text_type_4 block">E-mail</span>
 
-<input class="textbox block text_type_4" type="text" name="email"/>
+<input class="textbox block input_type_text" type="text" name="email"/>
 
 <div style="margin-top: 60px; width: 100%; position: relative;" class="block">
 <span class="text_type_4">Password</span> 
 <span onclick="alert('asd');" class="text_type_5" style="cursor: pointer; position: absolute; right: 0;">Forgot your password?</span>
 </div>
 
-<input class="textbox block" type="password" name="password"/>
+<input class="textbox block input_type_text" type="password" name="password"/>
 
 
 <span class="block text_type_7" style="margin-top: 5px;">asd</span>
