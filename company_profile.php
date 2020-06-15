@@ -33,7 +33,7 @@ print($return_value);
 <div class="logo_box vertical-center">
 <img style="cursor: pointer; height:80px;" onclick="window.location='index.php'" src="res/logom.png"/>
 </div>
-</div>
+
 
 <div class="other_buttons_box vertical-center">
 <button onclick="window.location='sign_up.php'" class="button_without_background">Get paid to test</button>
@@ -41,10 +41,10 @@ print($return_value);
 <button onclick="window.location='index.php'" class="button_without_background">Pricing</button>
 <button onclick="window.location='index.php'" class="button_without_background">Contact us</button>
 <button onclick="window.location='try_for_free.php'" class="button_with_background">Try for free</button>
-<?php sign_or_profile();?>
+<?php sign_or_profile(); ?>
 </div>
 
-
+</div>
 </div>
 
 

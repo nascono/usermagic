@@ -21,7 +21,7 @@ exit();
 <body>
 
 <div class="top">
-
+<div class="top_items">
 <div class="logo_box vertical-center">
 <img style="cursor: pointer; height:80px;" onclick="window.location='index.php'" src="res/logom.png"/>
 </div>
@@ -36,9 +36,8 @@ exit();
 <button onclick="window.location='sign_in.php'" class="button_without_background">Sign in</button>
 </div>
 
-
 </div>
-
+</div>
 
 
 
