@@ -1,5 +1,5 @@
 <?php
-include("back_end/sign_or_profile");
+include("back_end/sign_or_profile.php");
 if_session_dont_exists();
 ?>
 <html>

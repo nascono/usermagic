@@ -12,7 +12,7 @@ if($myvalue>0)
 {
 	session_start();
 	$_SESSION['company_name']=$rows["company"];
-	header("Refresh: 3; url=company_profile.php");
+	header("Refresh: 0; url=company_profile.php");
 }
 exit();
 }
