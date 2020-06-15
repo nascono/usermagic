@@ -6,7 +6,13 @@ $db = mysqli_connect("eu-cdbr-west-03.cleardb.net","b622d4411afd95","fcdf179a","
 $sql ='SELECT * FROM `companies` WHERE `email` ="'.$_POST["email"].'" &&`password`="'.$_POST["password"].'"';
 $result=mysqli_query($db,$sql);
 $myvalue=mysqli_num_rows($result);
-print_r($myvalue);
+$rows= mysqli_fetch_array($result);
+print_r($rows);
+if($myvalue>0)
+{
+	session_start();
+	$_SESSION['company_name']="";
+}
 exit();
 }
 ?>
