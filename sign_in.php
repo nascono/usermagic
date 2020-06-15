@@ -7,7 +7,6 @@ $sql ='SELECT * FROM `companies` WHERE `email` ="'.$_POST["email"].'" &&`passwor
 $result=mysqli_query($db,$sql);
 $myvalue=mysqli_num_rows($result);
 $rows= mysqli_fetch_array($result);
-print_r($rows);
 if($myvalue>0)
 {
 	session_start();

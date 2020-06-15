@@ -79,7 +79,10 @@ font-weight: 500;
 font-size: 24px;
 line-height: 160%;
 border: 0px solid white;
-
+}
+.button_without_background:hover
+{
+	text-decoration: underline;
 }
 .button_with_background_2
 {
