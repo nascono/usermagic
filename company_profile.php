@@ -2,8 +2,9 @@
 session_start();
 if(!isset($_SESSION['company_name']))
 {
-exit();
 header("Location: index.php");
+exit();
+
 }
 
 function get_company_name()

@@ -1,4 +1,10 @@
 <?php
+if(!isset($_SESSION['company_name']))
+{
+header("Location: index.php");
+exit();
+
+}
 if(!$_POST)
 {
 	header("Location: index.php");
