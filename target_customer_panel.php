@@ -147,7 +147,7 @@ var new_element = document.createElement("input");
 new_element.type="hidden";
 new_element.id=str+"_input";
 new_element.name="interests[]";
-new_element.value=document.getElementById(str).innerHTML;
+new_element.value=str;
 document.getElementById(str).style.border="2px solid #187CE0";
 document.getElementById("hidden_inputs").appendChild(new_element);  
 }
