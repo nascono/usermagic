@@ -1,6 +1,10 @@
+*
+{
+	outline-style: hidden;
+}
 .select_box_radio_button
 {
-width: 300px;
+width: 275px;
 height: 63px;
 background-color: transparent;
 border: 2px solid #E2E2E2;
@@ -15,7 +19,7 @@ line-height:275px;
 }
 .select_box_input_text
 {
-width: 300px;
+width: 275px;
 height: 63px;
 background-color: transparent;
 border: 2px solid #E2E2E2;
@@ -29,7 +33,7 @@ line-height:275px;
 {
 position: absolute;
 bottom: 1%;
-width: 300px;
+width: 275px;
 height: 63px;
 background: #187CE0;
 border-radius: 50px;
