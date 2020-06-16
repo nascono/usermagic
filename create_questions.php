@@ -1,11 +1,7 @@
 <?php
 if(!isset($_POST))
 {
-	header("Location: index.php");
-}
-if(!isset($_SESSION['company_name']))
-{
-	header("Location: index.php");
+	echo "post yok";
 }
 
 ?>
