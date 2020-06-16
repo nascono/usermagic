@@ -1,7 +1,8 @@
 <?php
 if(!isset($_POST))
 {
-	echo "post yok";
+	header("Location: index.php");
+	exit();
 }
 
 ?>
