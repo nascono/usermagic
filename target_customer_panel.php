@@ -61,7 +61,7 @@ function get_interests()
 <span class="text_type_13">Determine your target customers</span>
 </div>
 
-<form method="post">
+<form method="post" action="create_questions.php">
 <div class="block">
 <span class="text_type_14">Gender</span>
 </div>

@@ -36,19 +36,10 @@ print($_SESSION['company_name']);
 </div>
 
 <div class="block" style="text-align: -webkit-center;">
-<button style="margin-top: 4%;" onclick="window.location='create_qa_campaign.php';" class="select_box_radio_button_3">
-<span class="text_type_16">Start a Campaign</span></button>
+<button style="margin-top: 4%;" onclick="window.location='target_customer_panel.php';" class="select_box_radio_button_3">
+<span class="text_type_16">Start a new Campaign</span></button>
 </div>
 
-
-<div class="block" style="text-align: -webkit-center;">
-<button style="margin-top: 1%;" onclick="window.location='create_qa_campaign.php';" class="select_box_radio_button_3">
-<span class="text_type_16">Go to your exsiting campaigns</span></button>
-</div>
-
-<div class="block" style="text-align: -webkit-center;">
-<button style="margin-top: 1%;" onclick="window.location='?logout';" class="select_box_radio_button_3">
-<span class="text_type_16">Log out</span></button>
 </div>
 
 </div>
