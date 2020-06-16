@@ -31,8 +31,8 @@ line-height:275px;
 }
 .select_box_submit_button
 {
-position: fixed;
-bottom: 1%;
+position: relative;
+margin-top: 1%;
 width: 275px;
 height: 63px;
 background: #187CE0;
@@ -48,6 +48,6 @@ display: inline-block;
 overflow: hidden;
 cursor: pointer;
 
-left: 50%;
+margin-left: 50%;
 transform: translateX(-50%);
 }
