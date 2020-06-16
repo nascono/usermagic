@@ -33,7 +33,7 @@ function get_locations()
 function get_interests()
 {
 	$myvalue="";
-	$str=array("aaa","ccc");
+	$str=array("Mobile games","Fashion","Social media","Sports","Software","Technology","Finance","Marketing","Bussines", "Entrepreneurship");
 	for ($x = 0; $x < count($str); $x++) {
 	$myvalue=$myvalue."<div style=\"margin: 5px;\" onclick=\"interests_added('".
 	$str[$x]."');\" id=\"".
