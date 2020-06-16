@@ -1,5 +1,5 @@
 <?php
-if(!isset($_POST))
+if(!$_POST)
 {
 	header("Location: index.php");
 	exit();
