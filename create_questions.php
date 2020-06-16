@@ -3,13 +3,13 @@
 {
 	header("Location: index.php");
 	exit();
-}*/
+}
 if(!isset($_SESSION['company_name']))
 {
 	header("Location: index.php");
 	exit();
 }
-
+*/
 ?>
 <html>
 <head>
