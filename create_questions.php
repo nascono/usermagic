@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(!isset($_SESSION['company_name']))
 {
 header("Location: index.php");
