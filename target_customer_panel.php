@@ -6,11 +6,29 @@ header("Location: index.php");
 exit();
 }
 
+
+$creator_name=$_SESSION['company_name'];
+$creator_id=$_SESSION['company_id'];
+$target_interests=json_encode($_POST["interests[]"]) ;
+$db = mysqli_connect("eporqep6b4b8ql12.chr7pe7iynqr.eu-west-1.rds.amazonaws.com","nlc74woxcs5sif1d","mxbfj4mgfnaj3bi1","nb62b3bzhn3djx6q");
 if($_POST)
 {
+$sql="INSERT INTO `campaigns` (`id`, `camaign_name`, `creator_id`, `creator_name`, `application_name`, `application_url`, `target_gender`, `target_age_distance`, `target_number_of_testers`, `target_location`, `target_interests`, `requirements_from_tester`) VALUES (NULL, '".
+$_POST["camaign_name"]."', '".
+$creator_id."', '".
+$creator_name."', '".
+$_POST["application_name"]."', '".
+$_POST["application_url"]."', '".
+$_POST["target_gender"]."', '".
+$_POST["target_age_distance"]."', '".
+$_POST["target_number_of_testers"]."', '".
+$_POST["target_location"]."', '".
+$target_interests."', '".
+$_POST["requirements_from_tester"]."');";
+$result = mysqli_query($db,$sql);
+$_SESSION["campaign_id"]=mysqli_insert_id($db);
+header("Location: create_questions.php");
 
-echo"<pre>";
- print_r($_POST);
  exit();
 }
 function get_ages()
@@ -66,7 +84,7 @@ function get_interests()
 <span class="text_type_13">Determine your target customers</span>
 </div>
 
-<form method="post" action="create_questions.php">
+<form method="post">
 <div class="block">
 <span class="text_type_14">Gender</span>
 </div>

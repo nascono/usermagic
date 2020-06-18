@@ -11,6 +11,7 @@ if($myvalue>0)
 {
 	session_start();
 	$_SESSION['company_name']=$rows["company"];
+	$_SESSION['compnay_id']=$rows["id"];
 	header("Refresh: 0; url=company_profile.php");
 }
 exit();
