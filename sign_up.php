@@ -16,13 +16,13 @@ if($adet==0)
 	mysqli_query($db,$sql);
 	echo "Successfully register you are directing to main page";
 	header("Refresh: 3; url=index.php");
+	exit();
 }
 else
 {
 	$error_code="Email has already captured.";
 	//header("Location: sign_up.php");
 }
-exit();
 }
 
 ?>
