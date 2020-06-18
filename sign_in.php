@@ -23,11 +23,13 @@ else
 	$result=mysqli_query($db,$sql);
 	$myvalue=mysqli_num_rows($result);
 	$rows= mysqli_fetch_array($result);
+	if($myvalue>0){
 	$_SESSION['user_email']=$rows["user_email"];
 	$_SESSION['user_name']=$rows["first_name"]." ".$rows["last_name"];
 	$_SESSION['user_id']=$rows["id"];
 	header("Location: user_profile.php");
 	exit();
+	}
 }
 
 
