@@ -8,19 +8,19 @@ exit();
 
 
 $creator_name=$_SESSION['company_name'];
-$creator_id=$_SESSION['company_id'];
+$creator_id= $_SESSION['company_id'];
 $target_interests=json_encode($_POST["interests"]) ;
 $db = mysqli_connect("eporqep6b4b8ql12.chr7pe7iynqr.eu-west-1.rds.amazonaws.com","nlc74woxcs5sif1d","mxbfj4mgfnaj3bi1","nb62b3bzhn3djx6q");
 if($_POST)
 {
 $sql="INSERT INTO `campaigns` (`id`, `camaign_name`, `creator_id`, `creator_name`, `application_name`, `application_url`, `target_gender`, `target_age_distance`, `target_number_of_testers`, `target_location`, `target_interests`, `requirements_from_tester`) VALUES (NULL, '".
-$_POST["camaign_name"]."', '".
+$_POST["campaign_name"]."', '".
 $creator_id."', '".
 $creator_name."', '".
 $_POST["application_name"]."', '".
 $_POST["application_link"]."', '".
-$_POST["camaign_name"]."', '".
-$_POST["age1"]."-".$_POST["age2"]."', '".
+$_POST["campaign_name"]."', '".
+$_POST["age_1"]."-".$_POST["age_2"]."', '".
 $_POST["number_of_testers"]."', '".
 $_POST["location"]."', '".
 $target_interests."', '".
@@ -192,7 +192,7 @@ function gender_changed( str1, str2, str3)
 	document.getElementById(str1).style.border="2px solid #187CE0";
 	document.getElementById(str2).style.border="2px solid #E2E2E2";
 	document.getElementById(str3).style.border="2px solid #E2E2E2";
-	document.getElementById("gender_input").value=document.getElementById(str1).value;
+	document.getElementById("gender_input").value=document.getElementById(str1).name;
 }
 
 
