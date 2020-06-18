@@ -4,7 +4,7 @@ if($_POST)
 {
 $db = mysqli_connect("eporqep6b4b8ql12.chr7pe7iynqr.eu-west-1.rds.amazonaws.com","nlc74woxcs5sif1d","mxbfj4mgfnaj3bi1","nb62b3bzhn3djx6q");
 $sql ='SELECT * FROM `companies` WHERE `email` ="'.$_POST["email"].'"';
-$sql2 ='SELECT * FROM `companies` WHERE `email` ="'.$_POST["email"].'"';
+$sql2 ='SELECT * FROM `users` WHERE `email` ="'.$_POST["email"].'"';
 mysqli_query($db,"SET NAMES UTF8");
 $adet=0;
 $adet+=mysqli_num_rows(mysqli_query($db,$sql));
@@ -20,10 +20,11 @@ if($adet==0)
 else
 {
 	$error_code="Email has already captured.";
-	header("Location: sign_up.php");
+	//header("Location: sign_up.php");
 }
 exit();
 }
+
 ?>
 <html>
 <head>
@@ -160,7 +161,7 @@ exit();
 </div>
 </div>
 <div class="block" style="margin-top: 1%; text-align: -webkit-center;">
-<span><?php echo $error_code;?></span>
+<span><?php print($error_code);?></span>
 </div>
 <div style="margin-top: 10%; text-align: -webkit-center;" class="block">
 <input id="submit_button" type="submit" class="block button_with_background_2" value="Let's Begin!"/>
