@@ -20,9 +20,13 @@ if($adet==0)
 }
 else
 {
-	$error_code="Email has already captured.";
-	//header("Location: sign_up.php");
+	header("Location: sign_up.php#slide-3?error_code=1");
 }
+}
+function get_error()
+{
+	if($_GET["error_code"])
+	{print("Email has already captured.");}
 }
 
 ?>
@@ -161,7 +165,7 @@ else
 </div>
 </div>
 <div class="block" style="margin-top: 1%; text-align: -webkit-center;">
-<span><?php print($error_code);?></span>
+<span><?php get_error();?></span>
 </div>
 <div style="margin-top: 10%; text-align: -webkit-center;" class="block">
 <input id="submit_button" type="submit" class="block button_with_background_2" value="Let's Begin!"/>
