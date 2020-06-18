@@ -145,7 +145,7 @@ function get_interests()
 <span class="text_type_14">Campaign Name</span>
 </div>
 <div class="block">
-<input type="text" id="number_of_testers" name="number_of_testers" class="select_box_input_text text_type_15"/>
+<input type="text" id="campaign_name" name="campaign_name" class="select_box_input_text text_type_15"/>
 </div>
 
 <div class="block">
