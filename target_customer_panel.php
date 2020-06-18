@@ -27,8 +27,9 @@ $target_interests."', '".
 $_POST["requirements_from_tester"]."');";
 $result = mysqli_query($db,$sql);
 $_SESSION["campaign_id"]=mysqli_insert_id($db);
-header("Location: create_questions.php");
-
+//header("Location: create_questions.php");
+echo "<pre>";
+print_r($_POST);
  exit();
 }
 function get_ages()
