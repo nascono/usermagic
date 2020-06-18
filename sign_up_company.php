@@ -1,7 +1,7 @@
 <?php
 if($_POST)
 {
-$db = mysqli_connect("eu-cdbr-west-03.cleardb.net","b622d4411afd95","fcdf179a","heroku_d686cc7dd5c25ab");
+$db = mysqli_connect("eporqep6b4b8ql12.chr7pe7iynqr.eu-west-1.rds.amazonaws.com","nlc74woxcs5sif1d","mxbfj4mgfnaj3bi1","nb62b3bzhn3djx6q");
 $sql="INSERT INTO `companies` (`id`, `company`, `title`, `city`, `country`, `full_name`, `email`, `password`) VALUES (NULL, '".
 $_POST["company"]."', '".
 $_POST["title"]."', '".

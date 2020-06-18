@@ -109,13 +109,50 @@ function get_interests()
 
 </div>
 <div class="block">
-<input class="select_box_submit_button" type="submit" value="Create survey"/>
+<div style="text-align: center; line-height: 60px;" onclick="open_modal();" class="inline-block select_box_submit_button"  >Perfect!</div>
 </div>
 
 
 
 
 <div style="display: none;" id="hidden_inputs">
+</div>
+
+
+
+<div class="modal" id="modal">
+<div class="modal_box">
+<div class="block">
+<span class="text_type_14">Campaign Name</span>
+</div>
+<div class="block">
+<input type="text" id="number_of_testers" name="number_of_testers" class="select_box_input_text text_type_15"/>
+</div>
+
+<div class="block">
+<span class="text_type_14">Application Name</span>
+</div>
+<div class="block">
+<input type="text" id="application_name" name="application_name" class="select_box_input_text text_type_15"/>
+</div>
+
+
+<div class="block">
+<span class="text_type_14">Application Link</span>
+</div>
+<div class="block">
+<input type="text" id="application_link" name="application_link" class="select_box_input_text text_type_15"/>
+</div>
+
+<div class="block">
+<input class="select_box_submit_button" type="submit" value="Create survey"/>
+</div>
+
+</div>
+
+
+
+</div>
 </div>
 </form>
 </div>
@@ -151,6 +188,11 @@ new_element.value=str;
 document.getElementById(str).style.border="2px solid #187CE0";
 document.getElementById("hidden_inputs").appendChild(new_element);  
 }
+}
+
+function open_modal()
+{
+document.getElementById("modal").style.display ="block";
 }
 </script>
 
