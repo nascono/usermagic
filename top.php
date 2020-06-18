@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 function sign_or_profile()
 {
 	$return_value="<button onclick=\"window.location='sign_in.php'\" class=\"button_without_background\">Sign in</button>";
@@ -16,7 +17,7 @@ function sign_or_profile()
 function log_out_button()
 {
 	$return_value="";
-	if(isset($_SESSION['company_name']))
+	if(isset($_SESSION['company_name']) OR isset($_SESSION['user_name']))
 	{
 		$return_value="<button onclick=\"window.location='log_out.php'\" class=\"button_without_background\">"."Log Out"."</button>";
 	}

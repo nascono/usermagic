@@ -1,12 +1,27 @@
 <?php
+$error_code="";
 if($_POST)
 {
 $db = mysqli_connect("eporqep6b4b8ql12.chr7pe7iynqr.eu-west-1.rds.amazonaws.com","nlc74woxcs5sif1d","mxbfj4mgfnaj3bi1","nb62b3bzhn3djx6q");
-$sql="INSERT INTO `users` (`id`, `first_name`, `last_name`, `city`, `country`, `profession`, `age`, `gender`, `email`, `password`) VALUES (NULL, '".$_POST["first_name"]."', '".$_POST["last_name"]."', '".$_POST["city"]."', '".$_POST["country"]."', '".$_POST["profession"]."', '".$_POST["age"]."', '".$_POST["gender"]."', '".$_POST["email"]."', '".$_POST["password"]."');";
+$sql ='SELECT * FROM `companies` WHERE `email` ="'.$_POST["email"].'"';
+$sql2 ='SELECT * FROM `companies` WHERE `email` ="'.$_POST["email"].'"';
 mysqli_query($db,"SET NAMES UTF8");
-mysqli_query($db,$sql);
-echo "Successfully register you are directing to main page";
-header("Refresh: 3; url=index.php");
+$adet=0;
+$adet+=mysqli_num_rows(mysqli_query($db,$sql));
+$adet+=mysqli_num_rows(mysqli_query($db,$sql2));
+
+if($adet==0)
+{
+	$sql="INSERT INTO `users` (`id`, `first_name`, `last_name`, `city`, `country`, `profession`, `age`, `gender`, `email`, `password`) VALUES (NULL, '".$_POST["first_name"]."', '".$_POST["last_name"]."', '".$_POST["city"]."', '".$_POST["country"]."', '".$_POST["profession"]."', '".$_POST["age"]."', '".$_POST["gender"]."', '".$_POST["email"]."', '".$_POST["password"]."');";
+	mysqli_query($db,$sql);
+	echo "Successfully register you are directing to main page";
+	header("Refresh: 3; url=index.php");
+}
+else
+{
+	$error_code="Email has already captured.";
+	header("Location: sign_up.php");
+}
 exit();
 }
 ?>
@@ -143,6 +158,9 @@ exit();
 <input type="password" name="confirm_password" id="confirm_password" class="input_type_text block small_textbox"/>
 
 </div>
+</div>
+<div class="block" style="margin-top: 1%; text-align: -webkit-center;">
+<span><?php echo $error_code;?></span>
 </div>
 <div style="margin-top: 10%; text-align: -webkit-center;" class="block">
 <input id="submit_button" type="submit" class="block button_with_background_2" value="Let's Begin!"/>
