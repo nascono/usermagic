@@ -9,7 +9,7 @@ exit();
 
 $creator_name=$_SESSION['company_name'];
 $creator_id=$_SESSION['company_id'];
-$target_interests=json_encode($_POST["interests[]"]) ;
+$target_interests=json_encode($_POST["interests"]) ;
 $db = mysqli_connect("eporqep6b4b8ql12.chr7pe7iynqr.eu-west-1.rds.amazonaws.com","nlc74woxcs5sif1d","mxbfj4mgfnaj3bi1","nb62b3bzhn3djx6q");
 if($_POST)
 {
@@ -18,11 +18,11 @@ $_POST["camaign_name"]."', '".
 $creator_id."', '".
 $creator_name."', '".
 $_POST["application_name"]."', '".
-$_POST["application_url"]."', '".
-$_POST["target_gender"]."', '".
-$_POST["target_age_distance"]."', '".
-$_POST["target_number_of_testers"]."', '".
-$_POST["target_location"]."', '".
+$_POST["application_link"]."', '".
+$_POST["camaign_name"]."', '".
+$_POST["age1"]."-".$_POST["age2"]."', '".
+$_POST["number_of_testers"]."', '".
+$_POST["location"]."', '".
 $target_interests."', '".
 $_POST["requirements_from_tester"]."');";
 $result = mysqli_query($db,$sql);
