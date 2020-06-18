@@ -1,7 +1,8 @@
 <?php
 if($_POST)
 {
-echo "ssss";
+session_start();
+$error_code="";
 $db = mysqli_connect("eporqep6b4b8ql12.chr7pe7iynqr.eu-west-1.rds.amazonaws.com","nlc74woxcs5sif1d","mxbfj4mgfnaj3bi1","nb62b3bzhn3djx6q");
 $sql ='SELECT * FROM `companies` WHERE `email` ="'.$_POST["email"].'" &&`password`="'.$_POST["password"].'"';
 $result=mysqli_query($db,$sql);
@@ -9,12 +10,30 @@ $myvalue=mysqli_num_rows($result);
 $rows= mysqli_fetch_array($result);
 if($myvalue>0)
 {
-	session_start();
+	
 	$_SESSION['company_name']=$rows["company"];
 	$_SESSION['compnay_id']=$rows["id"];
-	header("Refresh: 0; url=company_profile.php");
+	header("Location: company_profile.php");
+	exit();
 }
-exit();
+else
+{
+	$sql ='SELECT * FROM `users` WHERE `email` ="'.$_POST["email"].'" &&`password`="'.$_POST["password"].'"';
+	$result=mysqli_query($db,$sql);
+	$myvalue=mysqli_num_rows($result);
+	$rows= mysqli_fetch_array($result);
+	$_SESSION['user_email']=$rows["user_email"];
+	$_SESSION['user_name']=$rows["first_name"]." ".$rows["last_name"];
+	$_SESSION['user_id']=$rows["id"];
+	header("Location: user_profile.php");
+	exit();
+}
+
+
+}
+function get_error_code()
+{
+	
 }
 ?>
 <html>

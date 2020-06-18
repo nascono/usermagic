@@ -7,6 +7,10 @@ function sign_or_profile()
 	{
 		$return_value="<button onclick=\"window.location='company_profile.php'\" class=\"button_without_background\">".$_SESSION['company_name']."'s Dashboard"."</button>";
 	}
+	else if(isset($_SESSION['user_name']))
+	{
+		$return_value="<button onclick=\"window.location='user_profile.php'\" class=\"button_without_background\">".$_SESSION['user_name']."'s Dashboard"."</button>";
+	}
 	print($return_value);
 }
 function log_out_button()
@@ -21,7 +25,7 @@ function log_out_button()
 function is_company_dont_show()
 {
 	$val ="";
-	if(isset($_SESSION['company_name']))
+	if(isset($_SESSION['company_name']) OR isset($_SESSION['user_name']))
 	{
 		$val='style="display: none;"';
 	}

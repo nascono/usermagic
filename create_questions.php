@@ -1,16 +1,24 @@
 <?php
 session_start();
-if(!isset($_SESSION['company_name']))
+if(!isset($_SESSION['company_name']) OR !isset($_SESSION['campaign_id']))
 {
 header("Location: index.php");
 exit();
+}
+if($_POST)
+{
+	$test_name = $_POST["test_name"];
+	$question_texts_json = json_encode($_POST["question_texts"]);
+	$db = mysqli_connect("eporqep6b4b8ql12.chr7pe7iynqr.eu-west-1.rds.amazonaws.com","nlc74woxcs5sif1d","mxbfj4mgfnaj3bi1","nb62b3bzhn3djx6q");
+	$sql ="INSERT INTO `tests` (`id`, `campaign_id`, `reached_user`, `test_json`, `test_name`) VALUES (NULL, '".
+	$_SESSION['campaign_id']."', '".
+	"0"."', '".
+	$question_texts_json."', '".
+	$test_name."');";
+	mysqli_query($db,$sql);
 
 }
-if(!$_POST)
-{
-	header("Location: index.php");
-	exit();
-}
+
 
 ?>
 <html>
@@ -24,10 +32,7 @@ if(!$_POST)
 <body>
 <?php include("top.php"); ?>
 <div class="middle">
-<?php
-echo"<pre>";
-print_r($_POST);
-?>
+
 </div>
 </body>
 </html>
