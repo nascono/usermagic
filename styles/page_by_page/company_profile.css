@@ -1,0 +1,73 @@
+*
+{
+	outline-style: hidden;
+}
+.select_box_radio_button
+{
+width: 275px;
+height: 63px;
+background-color: transparent;
+border: 2px solid #E2E2E2;
+border-radius: 15px;
+padding-left: 15px;
+display: inline-block;
+overflow: hidden;
+cursor: pointer;
+text-align: center;
+vertical-align: middle;
+line-height:275px;
+}
+.select_box_input_text
+{
+width: 275px;
+height: 63px;
+background-color: transparent;
+border: 2px solid #E2E2E2;
+border-radius: 15px;
+padding: 15px;
+display: inline-block;
+padding: 15px;
+line-height:275px;
+}
+.select_box_submit_button
+{
+position: relative;
+margin-top: 1%;
+width: 275px;
+height: 63px;
+background: #187CE0;
+border-radius: 50px;
+color: white;
+border: none;
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 160%;
+display: inline-block;
+overflow: hidden;
+cursor: pointer;
+
+margin-left: 50%;
+transform: translateX(-50%);
+}
+.modal
+{
+	display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal_box
+{
+	background-color: white; 
+	width: 60%;
+	height: 80%;
+	border-radius: 20px;
+	margin: 0 auto;
+	margin-top: 5%;
+}

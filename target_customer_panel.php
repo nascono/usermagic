@@ -145,6 +145,13 @@ function get_interests()
 </div>
 
 <div class="block">
+<span class="text_type_14">Requirements from tester</span>
+</div>
+<div class="block">
+<input type="text" id="requirements_from_tester" name="requirements_from_tester" class="select_box_input_text text_type_15"/>
+</div>
+
+<div class="block">
 <input class="select_box_submit_button" type="submit" value="Create survey"/>
 </div>
 
