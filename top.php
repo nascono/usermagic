@@ -34,9 +34,13 @@ function is_company_or_user_dont_show()
 }
 function is_user_show()
 {
-	print("<button onclick=\"window.location='joinable_campaigns.php'\" class=\"button_with_background\">Joinable Campaigns</button>");
-	print("<button onclick=\"window.location='approved_campaigns.php'\" class=\"button_with_background\">Approved Campaigns</button>");
-	print("<button onclick=\"window.location='disapproved_campaigns.php'\" class=\"button_with_background\">Disapproved Campaigns</button>");
+	if(isset($_SESSION['user_name']))
+	{
+		print("<button onclick=\"window.location='joinable_campaigns.php'\" class=\"button_without_background\">Joinable Campaigns</button>");
+		print("<button onclick=\"window.location='approved_campaigns.php'\" class=\"button_without_background\">Approved Campaigns</button>");
+		print("<button onclick=\"window.location='disapproved_campaigns.php'\" class=\"button_without_background\">Disapproved Campaigns</button>");
+	}
+	
 }
 ?>
 <div class="top">
