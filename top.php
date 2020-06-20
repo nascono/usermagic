@@ -23,7 +23,7 @@ function log_out_button()
 	}
 	print($return_value);
 }
-function is_company_dont_show()
+function is_company_or_user_dont_show()
 {
 	$val ="";
 	if(isset($_SESSION['company_name']) OR isset($_SESSION['user_name']))
@@ -31,6 +31,12 @@ function is_company_dont_show()
 		$val='style="display: none;"';
 	}
 	print($val);
+}
+function is_user_show()
+{
+	print("<button onclick=\"window.location='joinable_campaigns.php'\" class=\"button_with_background\">Joinable Campaigns</button>");
+	print("<button onclick=\"window.location='approved_campaigns.php'\" class=\"button_with_background\">Approved Campaigns</button>");
+	print("<button onclick=\"window.location='disapproved_campaigns.php'\" class=\"button_with_background\">Disapproved Campaigns</button>");
 }
 ?>
 <div class="top">
@@ -41,13 +47,12 @@ function is_company_dont_show()
 
 
 <div class="other_buttons_box vertical-center">
-<button <?php is_company_dont_show() ?> onclick="window.location='sign_up.php'" class="button_without_background">Get paid to test</button>
-<button <?php is_company_dont_show() ?>  onclick="window.location='solutions.php'" class="button_without_background">Solutions</button>
-<button <?php is_company_dont_show() ?>  onclick="window.location='index.php'" class="button_without_background">Pricing</button>
-<button <?php is_company_dont_show() ?>  onclick="window.location='index.php'" class="button_without_background">Contact us</button>
-<button <?php is_company_dont_show() ?>  onclick="window.location='try_for_free.php'" class="button_with_background">Try for free</button>
-
-<?php sign_or_profile(); log_out_button(); ?>
+<button <?php is_company_or_user_dont_show(); ?> onclick="window.location='sign_up.php'" class="button_without_background">Get paid to test</button>
+<button <?php is_company_or_user_dont_show(); ?>  onclick="window.location='solutions.php'" class="button_without_background">Solutions</button>
+<button <?php is_company_or_user_dont_show(); ?>  onclick="window.location='index.php'" class="button_without_background">Pricing</button>
+<button <?php is_company_or_user_dont_show(); ?>  onclick="window.location='index.php'" class="button_without_background">Contact us</button>
+<button <?php is_company_or_user_dont_show(); ?>  onclick="window.location='try_for_free.php'" class="button_with_background">Try for free</button>
+<?php is_user_show(); sign_or_profile(); log_out_button(); ?>
 </div>
 
 </div>

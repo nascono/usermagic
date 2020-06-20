@@ -12,7 +12,7 @@ $adet+=mysqli_num_rows(mysqli_query($db,$sql2));
 
 if($adet==0)
 {
-	$sql="INSERT INTO `users` (`id`, `first_name`, `last_name`, `city`, `country`, `profession`, `age`, `gender`, `email`, `password`) VALUES (NULL, '".$_POST["first_name"]."', '".$_POST["last_name"]."', '".$_POST["city"]."', '".$_POST["country"]."', '".$_POST["profession"]."', '".$_POST["age"]."', '".$_POST["gender"]."', '".$_POST["email"]."', '".$_POST["password"]."');";
+	$sql="INSERT INTO `users` (`id`, `first_name`, `last_name`, `city`, `country`, `profession`, `age`, `gender`, `email`, `password`,`interests`) VALUES (NULL, '".$_POST["first_name"]."', '".$_POST["last_name"]."', '".$_POST["city"]."', '".$_POST["country"]."', '".$_POST["profession"]."', '".$_POST["age"]."', '".$_POST["gender"]."', '".$_POST["email"]."', '".$_POST["password"]. ",''" ."');";
 	mysqli_query($db,$sql);
 	echo "Successfully register you are directing to main page";
 	header("Refresh: 3; url=index.php");
