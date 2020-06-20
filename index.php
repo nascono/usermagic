@@ -7,7 +7,7 @@ if(isset($_SESSION["company_name"]))
 }
 if(isset($_SESSION["user_name"]))
 {
-	header("Refresh: 0; url=company_profile.php");
+	header("Refresh: 0; url=user_profile.php");
 	exit();
 }
 ?>
