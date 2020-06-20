@@ -29,10 +29,14 @@ if($contiune)
 {
 	$to_html +="";
 }
-
-
 }
 
+
+
+function get_user_name()
+{
+print($_SESSION['user_name']);
+}
 ?>
 <html>
 <head>
