@@ -32,7 +32,15 @@ if($_POST)
 <body>
 <?php include("top.php"); ?>
 <div class="middle">
+<div class="questions">
 
+<div class="question_box">
+<span>Type your question</span>
+<input class="block" type="text" class="question_input_box"/>
+</div>
+
+</div>
+<div class="button_box">
 </div>
 </body>
 </html>

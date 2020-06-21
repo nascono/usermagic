@@ -2,3 +2,30 @@
 {
 	outline-style: hidden;
 }
+.questions
+{
+	display: block;
+	position: relative;
+	width: 70%;
+	margin: 0 auto;
+	
+}
+.question_box
+{
+	margin-top: 1%;
+	background: rgba(115, 140, 227, 0.25);
+	border-radius: 20px;
+	height: 263px;
+	width: 100%;
+	position: relative;
+	display: block;
+}
+.question_input_box
+{
+	background: #F2F5FC;
+	border-radius: 20px;
+	width: 80%;
+	height: 75px;
+	padding: 20px;
+	display: block;
+}
