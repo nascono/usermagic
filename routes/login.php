@@ -30,5 +30,9 @@ if(isset($_POST["x_auth"]))
 		$out["error_field"]="x_auth error";
 	}
 }
+else
+{
+	$out["error_field"]="bad request";
+}
 print(json_encode($out));
 ?>
