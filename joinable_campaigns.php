@@ -14,21 +14,22 @@ $db = mysqli_connect("eporqep6b4b8ql12.chr7pe7iynqr.eu-west-1.rds.amazonaws.com"
 
 
 $sql ="SELECT * FROM `campaigns`";
+$result=mysqli_query($sql);
 while($row = mysqli_fetch_assoc($result)) {
-$campaign_interests= json_decode($row["target_interests"]);
-$user_interests =json_decode($_SESSION["user_interests"]);
-$contiune=false;
-foreach($campaign_interests as &$interest)
-{
-	if(in_array($interest, $user_interests))
+	$campaign_interests= json_decode($row["target_interests"]);
+	$user_interests =json_decode($_SESSION["user_interests"]);
+	$contiune=false;
+	foreach($campaign_interests as &$interest)
 	{
-		$contiune=true;
+		if(in_array($interest, $user_interests))
+		{
+			$contiune=true;
+		}
 	}
-}
-if($contiune)
-{
-	$to_html +="";
-}
+	if($contiune)
+	{
+		$out[]=$row["id"];
+	}
 }
 
 
