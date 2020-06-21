@@ -5,8 +5,7 @@
 .questions
 {
 	display: block;
-	position: relative;
-	width: 70%;
+	width: 60%;
 	margin: 0 auto;
 	
 }
@@ -15,17 +14,71 @@
 	margin-top: 1%;
 	background: rgba(115, 140, 227, 0.25);
 	border-radius: 20px;
-	height: 263px;
+	height: 250px;
 	width: 100%;
-	position: relative;
+	display: block;
+}
+.blank_q
+{
+	width: 100%;
+	height: 7%;
+	display: block;
+}
+.question_box_center
+{
+	margin: 0 auto;
+	margin-top: 1%;
+	width: 90%;
 	display: block;
 }
 .question_input_box
 {
+	
 	background: #F2F5FC;
 	border-radius: 20px;
-	width: 80%;
+	width: 100%;
 	height: 75px;
 	padding: 20px;
 	display: block;
+	border: none;
+	margin-top: 1%;
+}
+.button_box
+{
+	
+}
+.add_question_button
+{
+	margin: 0 auto;
+	margin-top: 1%;
+	text-align: -webkit-center;
+	cursor: pointer;
+	background-color: #187CE0;
+	width: calc(12% + 4px);
+	height: 67px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 67px;
+	color: #FFFFFF;
+	border-radius: 50px;
+}
+.submit_survey_button
+{
+	margin: 0 auto;
+	margin-top: 1%;
+	text-align: -webkit-center;
+	cursor: pointer;
+	background-color: #FFFFFF;
+	width: 12%;
+	height: 63px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 63px;
+	color: #187CE0;
+	border: 4px solid #E2E2E2;
+	border-radius: 50px;
 }

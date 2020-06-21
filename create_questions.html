@@ -24,6 +24,7 @@ if($_POST)
 <html>
 <head>
 <meta charset="UTF-8"/>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link rel="stylesheet" href="styles/page_by_page/create_questions.css"/>
 <link rel="stylesheet" href="styles/text_types.css"/>
 <link rel="stylesheet" href="styles/button_and_other_elements.css"/>
@@ -32,15 +33,29 @@ if($_POST)
 <body>
 <?php include("top.php"); ?>
 <div class="middle">
-<div class="questions">
+<div id="questions" class="questions">
 
 <div class="question_box">
-<span>Type your question</span>
-<input class="block" type="text" class="question_input_box"/>
+<div class="question_box_center">
+<div class="blank_q"></div>
+<span class="text_type_15">Type your question</span>
+<input name="questions[]" type="text" class="question_input_box text_type_16"/>
 </div>
+</div>
+
 
 </div>
 <div class="button_box">
+<div onclick="add_question();" class="add_question_button"><i class="fas fa-plus-square"></i>&nbsp;Add question</div>
+<div class="submit_survey_button">Submit Survey</div>
 </div>
+</div>
+<script>
+function add_question()
+{
+	var elementhtml = "<div class=\"question_box\"><div class=\"question_box_center\"><div class=\"blank_q\"></div><span class=\"text_type_15\">Type your question</span><input name=\"questions[]\" type=\"text\" class=\"question_input_box text_type_16\"/></div></div>";
+	document.getElementById("questions").innerHTML=document.getElementById("questions").innerHTML+elementhtml;
+}
+</script>
 </body>
 </html>
