@@ -7,7 +7,7 @@ if(isset($_GET["x_auth"]))
 		$db = mysqli_connect("eporqep6b4b8ql12.chr7pe7iynqr.eu-west-1.rds.amazonaws.com","nlc74woxcs5sif1d","mxbfj4mgfnaj3bi1","nb62b3bzhn3djx6q");
 		if(isset($_GET["email"])&&isset($_GET["password"]))
 		{
-			$sql ='SELECT * FROM `companies` WHERE `email` ="'.$_GET["email"].'" &&`password`="'.$_GET["password"].'"';
+			$sql ='SELECT * FROM `users` WHERE `email` ="'.$_GET["email"].'" &&`password`="'.$_GET["password"].'"';
 			$result=mysqli_query($db,$sql);
 			$myvalue=mysqli_num_rows($result);
 			$rows= mysqli_fetch_array($result);
