@@ -64,7 +64,7 @@ if(isset($_POST["x_auth"]))
 	}
 	else
 	{
-		$out["error_field"]="x_auth error";
+		$out["error_field"]="x_auth_error";
 	}
 }
 else
