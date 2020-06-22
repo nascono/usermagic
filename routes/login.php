@@ -18,22 +18,22 @@ if(isset($_POST["x_auth"]))
 			}
 			else
 			{
-				$out["error_field"]="email or password is uncorrect";
+				$out["error_field"]="email_or_password_is_uncorrect";
 			}
 		}
 		else
 		{
-			$out["error_field"]="bad request";
+			$out["error_field"]="bad_request";
 		}
 	}
 	else
 	{
-		$out["error_field"]="x_auth error";
+		$out["error_field"]="x_auth_error";
 	}
 }
 else
 {
-	$out["error_field"]="bad request";
+	$out["error_field"]="bad_request";
 }
 print(json_encode($out));
 ?>
