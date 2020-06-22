@@ -1,5 +1,6 @@
-<meta charset="UTF-8"/>
 <?php
+header('Content-Type: text/json');
+
 $out = array();
 if(isset($_GET["x_auth"]))
 {
