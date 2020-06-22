@@ -16,7 +16,7 @@ if(isset($_POST["x_auth"]))
 				
 				$campaign_interests= json_decode($row["target_interests"]);
 				
-				$contiune=true;
+				$contiune=true;//false yapcan interest açıldığında
 				foreach($campaign_interests as &$interest)
 				{
 					if(in_array($interest, $user_interests))
