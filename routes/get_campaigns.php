@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/json');
 $out = array();
 if(isset($_POST["x_auth"]))
 {

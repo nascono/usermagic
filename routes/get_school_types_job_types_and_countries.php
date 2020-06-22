@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/json');
 $out = array();
 $school_types=array();;
 $job_types=array();
