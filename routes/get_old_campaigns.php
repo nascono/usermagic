@@ -15,17 +15,17 @@ if(isset($_POST["x_auth"]))
 		}
 		else
 		{
-			$out["error"]="bad_request";
+			$out["error_field"]="bad_request";
 		}
 	}
 	else
 	{
-		$out["error"]="x_auth_error";
+		$out["error_field"]="x_auth error";
 	}
 }
 else
 {
-	$out["error"]="bad_request";
+	$out["error_field"]="bad_request";
 }
 
 

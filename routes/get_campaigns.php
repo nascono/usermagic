@@ -17,7 +17,7 @@ if(isset($_POST["x_auth"]))
 				
 				$campaign_interests= json_decode($row["target_interests"]);
 				
-				$contiune=true;//false yapcan interest açıldığında
+				$contiune=true;//false yapılcak interest eklendiğinde
 				foreach($campaign_interests as &$interest)
 				{
 					if(in_array($interest, $user_interests))
@@ -30,16 +30,18 @@ if(isset($_POST["x_auth"]))
 				else{$contiune=false; }
 				
 				if($user["country"]!=$row["target_location"]){$contiune=false;}
-				
+
 				$age_1=(int)explode("-",$row["target_age_distance"])[0];
 				$age_2=(int)explode("-",$row["target_age_distance"])[1];
 				$userage= (int)date("Y")-(int)$user["year_of_birth"];
 				if($userage < $age_1 || $userage > $age_2){$contiune=false;}
 				
+				if(is_joined($db,$_POST["id"],$row["id"])){$contiune=false;}
 				
 				if($contiune)
 				{
 					$campaign_array = array();
+					$campaign_array["campaign_id"]=$row["id"];
 					$campaign_array["campaign_name"]=$row["campaign_name"];
 					$campaign_array["creator_id"]=$row["creator_id"];
 					$campaign_array["creator_name"]=$row["creator_name"];
@@ -53,6 +55,7 @@ if(isset($_POST["x_auth"]))
 					$campaign_array["requirements_from_tester"]=$row["requirements_from_tester"];
 					$campaign_array["earning"]=$row["earning"];
 					$campaign_array["image"]=$row["image"];
+					$campaign_array["status"]="joinable";
 					$out[] = $campaign_array;
 				}
 			}
@@ -72,7 +75,21 @@ else
 {
 	$out["error"]="bad_request";
 }
+function is_joined($db,$user_id,$campaign_id)
+{
+	$adet=0;
+	$adet += mysqli_num_rows(mysqli_query($db,"SELECT * FROM `waiting_test_answers` WHERE `user_id` = '".$user_id."' AND `campaign_id` = '".$campaign_id."'"));
+	$adet += mysqli_num_rows(mysqli_query($db,"SELECT * FROM `approved_test_answers` WHERE `user_id` = '".$user_id."' AND `campaign_id` = '".$campaign_id."'"));
+	$adet += mysqli_num_rows(mysqli_query($db,"SELECT * FROM `unapproved_test_answers` WHERE `user_id` = '".$user_id."' AND `campaign_id` = '".$campaign_id."'"));
+	$adet += mysqli_num_rows(mysqli_query($db,"SELECT * FROM `saved_test_answers` WHERE `user_id` = '".$user_id."' AND `campaign_id` = '".$campaign_id."'"));
+	if($adet==0)
+	{return false;}
+	else{return true;}
+		
+}
 print(json_encode($out));
+
+
 //echo "<pre>";
 //print_r(json_decode(json_encode($out)));
 ?>
