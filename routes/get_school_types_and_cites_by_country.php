@@ -27,18 +27,18 @@ if(isset($_POST["x_auth"]))
 		}
 		else
 		{
-			$out["error_field"]="x_auth_error";
+			$out["error"]="x_auth_error";
 		}
 		
 	}
 	else
 	{
-		$out["error_field"]="x_auth_error";
+		$out["error"]="x_auth_error";
 	}
 }
 else
 {
-	$out["error_field"]="bad_request";
+	$out["error"]="bad_request";
 }
 $out["school_types"]=$school_types;
 $out["cities"]=$cities;

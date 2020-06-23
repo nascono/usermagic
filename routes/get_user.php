@@ -1,6 +1,5 @@
 <?php
 header('Content-Type: text/json');
-
 $out = array();
 if(isset($_POST["x_auth"]))
 {
@@ -25,6 +24,8 @@ if(isset($_POST["x_auth"]))
 				$out["gender"]=$rows["gender"];
 				$out["email"]=$rows["email"];
 				$out["interests"]=$rows["interests"];
+				$out["school_type"]=$rows["school_type"];
+				$out["money"]=$rows["money"];
 			}
 			else
 			{

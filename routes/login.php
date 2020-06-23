@@ -15,25 +15,26 @@ if(isset($_POST["x_auth"]))
 			if($myvalue>0)
 			{
 				$out["id"]=$rows["id"];
+				$out["complated"] ="true";
 			}
 			else
 			{
-				$out["error_field"]="email_or_password_is_uncorrect";
+				$out["error"]="email_or_password_is_uncorrect";
 			}
 		}
 		else
 		{
-			$out["error_field"]="bad_request";
+			$out["error"]="bad_request";
 		}
 	}
 	else
 	{
-		$out["error_field"]="x_auth_error";
+		$out["error"]="x_auth_error";
 	}
 }
 else
 {
-	$out["error_field"]="bad_request";
+	$out["error"]="bad_request";
 }
 print(json_encode($out));
 ?>

@@ -1,5 +1,4 @@
 <?php
-header('Content-Type: text/json');
 $out = array();
 if(isset($_POST["x_auth"]))
 {
@@ -13,7 +12,8 @@ if(isset($_POST["x_auth"]))
 		isset($_POST["profession"])&&
 		isset($_POST["year_of_birth"])&&
 		isset($_POST["gender"])&&
-		isset($_POST["interests"]))
+		isset($_POST["interests"])&&
+		isset($_POST["school_type"]))
 		{
 			$sql="UPDATE `users` SET `full_name` = '".
 			$_POST["full_name"]."', `city` = '".
@@ -22,7 +22,8 @@ if(isset($_POST["x_auth"]))
 			$_POST["profession"]."', `year_of_birth` = '".
 			$_POST["year_of_birth"]."', `gender` = '".
 			$_POST["gender"]."', `interests` = '".
-			$_POST["interests"]."' WHERE `users`.`id` = ".$_POST["id"].";";
+			$_POST["interests"]."', `school_type` = '".
+			$_POST["school_type"]."', `money` = '0'  WHERE `users`.`id` = ".$_POST["id"].";";
 			mysqli_query($db,$sql);
 			$out["id"]=$_POST["id"];
 		}

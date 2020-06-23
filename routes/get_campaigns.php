@@ -60,17 +60,17 @@ if(isset($_POST["x_auth"]))
 		}
 		else
 		{
-			$out["error_field"]="bad_request";
+			$out["error"]="bad_request";
 		}
 	}
 	else
 	{
-		$out["error_field"]="x_auth error";
+		$out["error"]="x_auth_error";
 	}
 }
 else
 {
-	$out["error_field"]="bad_request";
+	$out["error"]="bad_request";
 }
 print(json_encode($out));
 //echo "<pre>";

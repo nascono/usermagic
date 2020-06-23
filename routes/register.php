@@ -15,10 +15,11 @@ if(isset($_POST["x_auth"]))
 			$adet+=mysqli_num_rows(mysqli_query($db,$sql2));
 			if($adet==0)
 			{
-				$sql="INSERT INTO `users` (`id`, `full_name`, `city`, `country`, `profession`, `year_of_birth`, `gender`, `email`, `password`, `interests`) VALUES".
-				"(NULL, '', '', '', '', '', '', '".$_POST["email"]."', '".$_POST["password"]."', '');";
+				$sql="INSERT INTO `users` (`id`, `full_name`, `city`, `country`, `profession`, `year_of_birth`, `gender`, `email`, `password`, `interests`,`school_type`,`money`) VALUES".
+				"(NULL, '', '', '', '', '', '', '".$_POST["email"]."', '".$_POST["password"]."', '', '','');";
 				mysqli_query($db,$sql);
 				$out["id"] =mysqli_insert_id($db);
+				$out["complated"] ="true";
 			}
 			else
 			{
